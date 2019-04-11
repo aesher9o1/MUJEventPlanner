@@ -1,3 +1,26 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <img
+    src="../../../../assets/logo.jpg"
+    width="170px">
+  <h4>Sign in</h4>
+  <form>
+
+    <input name="email" placeholder="Email" type="email" [(ngModel)]="login.emailID" required>
+    <br>
+    <input name="password" type="password" placeholder="Password" [(ngModel)]="login.password" required>
+    <br>
+    <br>
+    <br>
+    <button mat-stroked-button color="primary" (click)="loginUser()" *ngIf="!fetching">Login</button>
+    <mat-progress-bar mode="query" *ngIf="fetching"></mat-progress-bar>
+    <div class="others">
+
+      <a routerLink="./calender">View Event Calender</a>
+      <div class="alert alert-danger" *ngIf="isError">
+        <strong class="mt-4">{{errorMessage}}</strong>
+
+      </div>
+    </div>
+
+  </form>
+</div>
