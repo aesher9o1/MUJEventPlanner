@@ -11,6 +11,8 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { CalenderComponent } from './pages/auth/calender/calender.component';
 
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,11 @@ import { CalenderComponent } from './pages/auth/calender/calender.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
