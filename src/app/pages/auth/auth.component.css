@@ -1,0 +1,59 @@
+.side-left {
+    background: url("http://skilloutlook.com/wp-content/uploads/2018/02/Manipal-University-14-Feb-2018.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0
+}
+
+.container {
+    text-align: center;
+    margin-top: 25%;
+}
+
+.texts {
+    position: absolute;
+    text-align: right;
+    color: white;
+    z-index: 999;
+    top: 25%;
+    right: 10%
+}
+
+p {
+    margin-top: 2em;
+    padding-left: 6em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gradient {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    background: #43C6AC;
+    background: -webkit-linear-gradient(to right, #f09819, #edde5d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f09819, #edde5d); 
+}
+
+h4 {
+    font-weight: 400;
+    margin-top: 1em
+}
+
+.others {
+    margin-top: 3em;
+}
+
+@media(max-width:763px) {
+    .texts {
+        display: none;
+    }
+    .gradient {
+        min-height: 3em
+    }
+}

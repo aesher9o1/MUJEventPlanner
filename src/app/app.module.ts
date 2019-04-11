@@ -8,12 +8,16 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { CalenderComponent } from './pages/auth/calender/calender.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,
