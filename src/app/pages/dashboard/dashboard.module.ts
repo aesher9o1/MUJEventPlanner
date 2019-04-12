@@ -7,11 +7,15 @@ import { MatCardModule, MatToolbarModule, MatTabsModule } from '@angular/materia
 import { MatButtonModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    EventsComponent
   ],
   imports: [
     CommonModule,
