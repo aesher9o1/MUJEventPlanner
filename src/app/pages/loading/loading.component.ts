@@ -23,7 +23,7 @@ export class LoadingComponent implements OnInit {
         const firstParam: string = this.route.snapshot.queryParamMap.get('authUser');
         this.db.list('users/' + this.encryptor.get(params.uname, firstParam)).valueChanges().subscribe(res => {
           localStorage.setItem('token','token');
-          this.router.navigate['/dashboard'];
+          this.router.navigate(['/dashboard']);
         })
 
       }
