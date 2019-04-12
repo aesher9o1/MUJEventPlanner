@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -21,15 +20,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from './pages/loading/loading.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { AngularFireModule } from '@angular/fire';
 import { app } from '../environments/firebase'
-
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { CryptonicsService } from './services/cryptonics.service';
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    DashboardComponent,
     LoginComponent,
     CalenderComponent,
     CalenderHeaderComponent,
@@ -50,10 +49,12 @@ import { app } from '../environments/firebase'
     MatFormFieldModule,
     MatProgressBarModule,
     FormsModule,
-    AngularFireModule.initializeApp(app)
+    AngularFireModule.initializeApp(app),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
 
   ],
-  providers: [],
+  providers: [CryptonicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
