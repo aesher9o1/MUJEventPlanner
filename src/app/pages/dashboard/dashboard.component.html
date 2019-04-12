@@ -1,3 +1,9 @@
-<p>
-  dashboard works!
-</p>
+<mat-toolbar>
+  <div class="container">
+    <img class="logo" src="../../../assets/logo.jpg">
+  </div>
+  <span class="example-spacer"></span>
+  <div class="container"><button mat-stroked-button (click)="signOut()">Logout</button></div>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

@@ -1,0 +1,18 @@
+footer{
+    background: #002138;
+    width: 100%;
+   
+    
+}
+
+.row{
+    padding: 0.5em 0   0.5em 0;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px
+}
+img{
+    opacity: 0.8;
+}
