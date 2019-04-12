@@ -4,6 +4,7 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { CalenderComponent } from './pages/auth/calender/calender.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { LoadingComponent } from './pages/loading/loading.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -22,7 +23,13 @@ const routes: Routes = [
   },
   {
     path: 'loading',
-    component: LoadingComponent
+    component: LoadingComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard',
+    loadChildren:'./pages/dashboard/dashboard.module#DashboardModule',
+    canActivate:[AuthGuard]
   },
   {
     path: '**',
