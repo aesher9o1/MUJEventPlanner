@@ -8,17 +8,20 @@ import { MatButtonModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
-import { HomeComponent } from './landing/home/home.component';
 import { CreateeventsComponent } from './landing/createevents/createevents.component';
+import { SpinnerComponent } from 'src/app/template/spinner/spinner.component';
+import { HomeComponent } from './landing/home/home.component';
+import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
     DashboardComponent,
     FooterComponent,
     LandingComponent,
-    HomeComponent,
-    CreateeventsComponent
-
+    CreateeventsComponent,
+    SpinnerComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

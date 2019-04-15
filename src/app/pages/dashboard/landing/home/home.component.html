@@ -1,3 +1,55 @@
-<p>
-  home works!
-</p>
+<div class="body">
+  <mat-card class="main">
+    <h2>Pending Events</h2>
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+    <div class="container" *ngIf="!showSpinner">
+      <div class="row">
+        <div *ngFor="let offer of offers" class="col-lg-4">
+          <mat-card class="mat-elevation-z0 offer-card">
+            <mat-card-content>
+              <h3>
+                {{offer.country}}
+              </h3>
+              <mat-card-subtitle>{{offer._id}}</mat-card-subtitle>
+              <p class="offer-text">
+                {{offer.details}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions *ngIf="isOfferThere">
+              <button mat-button> <a [href]="offer.view">VIEW</a></button>
+              <button mat-button><a [href]="offer.form">APPLY</a></button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="main">
+    <h2>Approve Events</h2>
+    <app-spinner *ngIf="showSpinner"></app-spinner>
+    <div class="container" *ngIf="!showSpinner">
+      <div class="row">
+        <div *ngFor="let offer of offers" class="col-lg-4">
+          <mat-card class="mat-elevation-z0 offer-card">
+            <mat-card-content>
+              <h3>
+                {{offer.country}}
+              </h3>
+              <mat-card-subtitle>{{offer._id}}</mat-card-subtitle>
+              <p class="offer-text">
+                {{offer.details}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions *ngIf="isOfferThere">
+              <button mat-button> <a [href]="offer.view">VIEW</a></button>
+              <button mat-button><a [href]="offer.form">APPLY</a></button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+ 
+</div>

@@ -1,0 +1,58 @@
+h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    color: #4A4A4A;
+  }
+
+  h3{
+    
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      color: #4A4A4A;
+      font-size: 1.25rem;
+  }
+
+  .main{
+    padding-top: 6em;
+    padding-bottom: 5em;
+    margin: 0 2em 2em 2em
+  }
+  .container{
+    margin-top: 2.5em 
+  }
+
+  .offer-card{
+    border: rgba(170, 170, 170,0.4) solid 1px;
+    margin-top: 2em
+  }
+  .mat-card-content{
+    margin-top: 1em
+  }
+
+  .offer-text{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.body{
+  background-color: #F8F9FA;
+  padding-top: 2em
+}
+
+.content{
+  padding: 2em;
+  line-height: 2;
+  padding: 2em 4em 2em 4em;
+}
+
+@media(max-width:400px){
+  .content{
+    padding: 2em;
+    line-height: 2;
+    padding: 2em 
+  }
+}

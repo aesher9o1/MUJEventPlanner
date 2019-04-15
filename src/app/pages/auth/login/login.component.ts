@@ -12,7 +12,7 @@ import { params } from '../../../../environments/systemvars'
 export class LoginComponent implements OnInit {
 
   constructor(public afAuth: AngularFireAuth, private router: Router, private encryptor: CryptonicsService) {
-    
+
     this.afAuth.authState.subscribe(res => {
       if (res != null)
         this.router.navigate(['/loading'], { queryParams: { authUser: this.encryptor.set(params.uname, res.uid) } });

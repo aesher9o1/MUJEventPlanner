@@ -32,7 +32,7 @@ import { CryptonicsService } from './services/cryptonics.service';
     LoginComponent,
     CalenderComponent,
     CalenderHeaderComponent,
-    LoadingComponent
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
